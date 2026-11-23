@@ -1,0 +1,22 @@
+name = "text-notification"
+main = "src/index.js"
+compatibility_date = "2026-11-23"
+workers_dev = true
+
+# Cloudflare Email Sending (MailChannels) — no API key needed.
+# The binding is locked down: it may only send FROM texts@voiceofdfw.com
+# and only TO claytongreenberg@gmail.com, so a leaked Worker URL cannot
+# be used to send mail anywhere else.
+# Requires voiceofdfw.com to be active on Cloudflare with SPF/DKIM records
+# (see README "Before it can send email"). If that is not the case, remove
+# this block and use the Resend fallback instead (README, same section).
+[[send_email]]
+name = "SEB"
+destination_address = "claytongreenberg@gmail.com"
+allowed_sender_addresses = ["texts@voiceofdfw.com"]
+
+[vars]
+TO_EMAIL = "claytongreenberg@gmail.com"
+FROM_EMAIL = "texts@voiceofdfw.com"
+# Message bodies are never logged unless this is set to "true".
+LOG_BODIES = "false"

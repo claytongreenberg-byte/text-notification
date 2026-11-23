@@ -1,0 +1,3 @@
+# Copy to .dev.vars for local `wrangler dev` testing. Never commit .dev.vars.
+# FORWARD_SECRET=pick-a-long-random-phrase
+# RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxxxx

@@ -1,0 +1,1 @@
+{"description":"Forward iPhone text messages to Gmail via a Cloudflare Worker.","devDependencies":{"wrangler":"^4.0.0"},"name":"text-notification","private":true,"scripts":{"deploy":"wrangler deploy","dev":"wrangler dev","tail":"wrangler tail","test":"node test/smoke.mjs"},"type":"module","version":"1.0.0"}
